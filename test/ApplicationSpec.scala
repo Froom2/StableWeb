@@ -24,5 +24,10 @@ class ApplicationSpec extends WordSpec with Matchers {
         }
       }
     }
+    "do something" when {
+      "test database function is called" in {
+        Application.listInstructors should contain theSameElementsAs(List("Freya","Laura"))
+      }
+    }
   }
 }
