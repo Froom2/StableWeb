@@ -1,4 +1,5 @@
-import controllers.Application
+package controllers
+
 import org.scalatest.{Matchers, WordSpec}
 import play.api.mvc.{AnyContent, Request, Result}
 import play.api.test.FakeRequest
@@ -24,7 +25,5 @@ class ApplicationSpec extends WordSpec with Matchers {
         }
       }
     }
-
-
   }
 }
