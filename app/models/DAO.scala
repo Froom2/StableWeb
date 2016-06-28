@@ -12,7 +12,7 @@ import play.api.Play.current
 
 trait DAOComponent {
 
-//  def insert(booking: Booking): Future[Int]
+  def insert(booking: Booking): Future[Int]
   def update(id: Int, booking: Booking): Future[Int]
   def delete(id: Int): Future[Int]
 //  def list(page: Int = 0, pageSize: Int = 10, orderBy: Int = 1, filter: String = "%"): Future[Page[Employee]]
@@ -57,9 +57,9 @@ object DAO extends DAOComponent {
   /**
     * Create a new employee
     */
-//  override def insert(booking: Booking): Future[Int] =
-//    try db.run(bookings += booking)
-//    finally db.close
+  override def insert(booking: Booking): Future[Int] =
+    try db.run(bookings += booking)
+    finally db.close
 
   /**
     * Update employee with id
